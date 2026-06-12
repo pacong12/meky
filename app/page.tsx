@@ -118,24 +118,7 @@ export default function Home() {
             >
               Web3
             </Link>
-            <Link
-              href="/bankr"
-              className="border-2 border-[#08080d] bg-[#fff4c4] px-3 py-2 font-display text-[10px] uppercase text-[#1b2b72] shadow-[3px_3px_0_#08080d] hover:bg-[#ffd166]"
-            >
-              Bankr
-            </Link>
-            <Link
-              href="/ops"
-              className="border-2 border-[#08080d] bg-[#fff4c4] px-3 py-2 font-display text-[10px] uppercase text-[#1b2b72] shadow-[3px_3px_0_#08080d] hover:bg-[#ffd166]"
-            >
-              Ops
-            </Link>
-            <Link
-              href="/api-docs"
-              className="border-2 border-[#08080d] bg-[#fff4c4] px-3 py-2 font-display text-[10px] uppercase text-[#1b2b72] shadow-[3px_3px_0_#08080d] hover:bg-[#ffd166]"
-            >
-              API
-            </Link>
+
             <Link
               href="/waitlist"
               className="border-2 border-[#08080d] bg-[#ffd166] px-3 py-2 font-display text-[10px] uppercase text-[#08080d] shadow-[3px_3px_0_#08080d] hover:bg-[#fff4c4]"
