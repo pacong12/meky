@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meki Adventure
 
-## Getting Started
+Web game retro top-down adventure berbasis Next.js. Fokus project ini adalah pengalaman game-first: pemain mengeksplorasi dunia pixel, berinteraksi dengan NPC, membuka item, dan menemukan konten website lewat gameplay.
 
-First, run the development server:
+## Dokumentasi
+
+- [Konsep game](docs/retro-adventure-game.md)
+- [Karakter dan dialog](docs/characters.md)
+- [Module dan setup](docs/modules-and-setup.md)
+- [MVP dan roadmap Web3](docs/web3-mvp.md)
+- [Roadmap pembangunan game](docs/game-roadmap.md)
+- [Sistem game: leveling, musuh, mining, reward](docs/game-systems.md)
+- [Kebutuhan asset desain](docs/asset-requirements.md)
+- [Rencana integrasi Bankr.bot](docs/bankr-integration.md)
+- [Bankr prompt templates](docs/bankr-prompts.md)
+- [Data schema](docs/data-schema.md)
+- [Deploy checklist](docs/deploy-checklist.md)
+- [x402 plan](docs/x402-plan.md)
+- [Backend draft](docs/backend-draft.md)
+- [Contract draft](docs/contracts.md)
+- [Rate limit](docs/rate-limit.md)
+
+## Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Halaman
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` landing page
+- `/about` konsep game
+- `/systems` sistem gameplay
+- `/web3` wallet dan ownership layer
+- `/bankr` console admin Bankr.bot
+- `/ops` readiness board untuk deploy dan integrasi
+- `/api-docs` dokumentasi endpoint backend
+- `/admin` overview internal
+- `/admin/waitlist` data waitlist
+- `/admin/claims` data claim
+- `/admin/rewards` catalog reward
+- `/claim` reward claim flow
+- `/roadmap` launch roadmap
+- `/assets` asset brief
+- `/waitlist` waitlist login Google, X, dan email
+- `/game` playable game
+- `/terms` terms awal
+- `/privacy` privacy awal
 
-## Learn More
+## Catatan Kerja
 
-To learn more about Next.js, take a look at the following resources:
+- Implementasi gameplay sedang dikerjakan manual.
+- Jangan menimpa file game tanpa koordinasi.
+- Jangan jalankan `npm run lint` atau `npm run build` kecuali diminta.
+- Hindari aset, nama, musik, sprite, map, atau simbol dari franchise Nintendo/Zelda secara langsung.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Bankr.bot:
 
-## Deploy on Vercel
+```bash
+BANKR_API_BASE_URL=https://api.bankr.bot
+BANKR_API_KEY=your_bankr_api_key
+BANKR_ADMIN_TOKEN=change_this_admin_console_token
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`BANKR_API_KEY` dan `BANKR_ADMIN_TOKEN` harus tetap server-only. Jangan pakai prefix `NEXT_PUBLIC_`.

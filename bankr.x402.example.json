@@ -1,0 +1,18 @@
+{
+  "services": {
+    "meki-game-report": {
+      "path": "x402/meki-game-report/index.ts",
+      "description": "Read-only Meki Adventure economy and claim report for agents.",
+      "price": "0.03",
+      "network": "base",
+      "methods": ["POST"]
+    },
+    "meki-asset-brief": {
+      "path": "x402/meki-asset-brief/index.ts",
+      "description": "Pixel-art production brief generator for Meki Adventure assets.",
+      "price": "0.01",
+      "network": "base",
+      "methods": ["POST"]
+    }
+  }
+}
