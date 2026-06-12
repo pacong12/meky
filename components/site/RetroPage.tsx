@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/8bit/card";
+import { Navbar } from "@/components/site/Navbar";
 
 export const siteNav = [
   { href: "/about", label: "About" },
@@ -17,33 +18,7 @@ export const siteNav = [
 ];
 
 export function SiteHeader() {
-  return (
-    <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-      <Link
-        href="/"
-        className="border-4 border-[#08080d] bg-[#e63946] px-3 py-2 font-display text-[11px] font-black uppercase leading-none text-white shadow-[4px_4px_0_#08080d]"
-      >
-        Retromolt
-      </Link>
-      <nav className="hidden items-center gap-3 font-display text-[10px] font-black uppercase sm:flex">
-        {siteNav.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="border-4 border-[#08080d] bg-[#fff4c4] px-3 py-2 font-display text-[10px] font-black uppercase text-[#1b2b72] shadow-[4px_4px_0_#08080d] hover:-translate-y-1 hover:bg-[#ffd166]"
-          >
-            {item.label}
-          </Link>
-        ))}
-        <Link
-          href="/game"
-          className="border-4 border-[#08080d] bg-[#e63946] px-3 py-2 font-display text-[10px] font-black uppercase text-white shadow-[4px_4px_0_#08080d] hover:-translate-y-1 hover:bg-[#ff4d5e]"
-        >
-          Play
-        </Link>
-      </nav>
-    </header>
-  );
+  return <Navbar />;
 }
 
 export function RetroBackdrop() {

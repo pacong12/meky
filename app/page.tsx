@@ -14,6 +14,7 @@ import {
 
 import { WalletStatus } from "@/components/web3/WalletStatus";
 import { SiteFooter } from "@/components/site/RetroPage";
+import { Navbar } from "@/components/site/Navbar";
 
 const web3Pillars = [
   {
@@ -92,47 +93,7 @@ export default function Home() {
       <section className="relative isolate min-h-[90svh] overflow-hidden border-b-8 border-[#08080d] bg-[#1b2b72]">
         <RetroBackdrop />
 
-        <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-          <Link
-            href="/"
-            className="border-4 border-[#08080d] bg-[#e63946] px-3 py-2 font-display text-[11px] font-black uppercase leading-none text-white shadow-[4px_4px_0_#08080d]"
-          >
-            Retromolt
-          </Link>
-          <nav className="hidden items-center gap-3 font-display text-[10px] font-black uppercase sm:flex">
-            <Link
-              href="/systems"
-              className="border-2 border-[#08080d] bg-[#fff4c4] px-3 py-2 font-display text-[10px] uppercase text-[#1b2b72] shadow-[3px_3px_0_#08080d] hover:bg-[#ffd166]"
-            >
-              Systems
-            </Link>
-            <Link
-              href="/claim"
-              className="border-2 border-[#08080d] bg-[#fff4c4] px-3 py-2 font-display text-[10px] uppercase text-[#1b2b72] shadow-[3px_3px_0_#08080d] hover:bg-[#ffd166]"
-            >
-              Claim
-            </Link>
-            <Link
-              href="/web3"
-              className="border-2 border-[#08080d] bg-[#fff4c4] px-3 py-2 font-display text-[10px] uppercase text-[#1b2b72] shadow-[3px_3px_0_#08080d] hover:bg-[#ffd166]"
-            >
-              Web3
-            </Link>
-
-            <Link
-              href="/waitlist"
-              className="border-2 border-[#08080d] bg-[#ffd166] px-3 py-2 font-display text-[10px] uppercase text-[#08080d] shadow-[3px_3px_0_#08080d] hover:bg-[#fff4c4]"
-            >
-              Waitlist
-            </Link>
-            <Link
-              href="/game"
-              className="border-2 border-[#08080d] bg-[#e63946] px-3 py-2 font-display text-[10px] uppercase text-white shadow-[3px_3px_0_#08080d] hover:bg-[#ff4d5e]"
-            >
-              Play
-            </Link>
-          </nav>
-        </header>
+        <Navbar />
 
         <div className="relative z-10 mx-auto grid min-h-[calc(90svh-84px)] w-full max-w-6xl items-center gap-8 px-5 pb-16 pt-6 sm:px-8 lg:grid-cols-[0.98fr_1.02fr]">
           <div className="max-w-2xl">
