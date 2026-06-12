@@ -17,10 +17,10 @@ const pressStart = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-  title: "Meki Adventure",
+  title: "Retromolt",
   description: "A retro Web3 adventure game with optional collectible rewards.",
   openGraph: {
-    title: "Meki Adventure",
+    title: "Retromolt",
     description: "A retro Web3 adventure game with optional collectible rewards.",
     type: "website",
   },

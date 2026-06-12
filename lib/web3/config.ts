@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://meki-adventure.verc
 export const web3Chains = [baseSepolia, base] as const;
 
 export const wagmiConfig = getDefaultConfig({
-  appName: "Meki Adventure",
+  appName: "Retromolt",
   appDescription: "Retro Web3 adventure game with optional collectible rewards.",
   appUrl: siteUrl,
   appIcon: "/favicon.ico",

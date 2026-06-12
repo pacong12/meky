@@ -18,17 +18,17 @@ import { SiteFooter } from "@/components/site/RetroPage";
 const web3Pillars = [
   {
     title: "Play First",
-    text: "Game tetap bisa dimainkan tanpa wallet. Web3 hanya menambah identitas, claim, dan koleksi.",
+    text: "The game is fully playable without a wallet. Web3 only adds identity, claims, and collectibles.",
     icon: Gamepad2,
   },
   {
     title: "Earn Badges",
-    text: "Quest, mining, dan boss clear bisa membuka badge kosmetik yang nantinya bisa diklaim.",
+    text: "Quests, mining, and boss clears unlock cosmetic badges that can be claimed on-chain later.",
     icon: Trophy,
   },
   {
     title: "Optional Wallet",
-    text: "Wallet connect dipakai untuk ownership dan claim reward, bukan untuk mengunci gameplay.",
+    text: "Wallet connect is used for ownership and reward claims — never to lock core gameplay.",
     icon: Wallet,
   },
 ];
@@ -43,22 +43,22 @@ const claimFlow = [
 const systems = [
   {
     title: "Leveling",
-    text: "XP, HP, attack, stamina, dan progres karakter.",
+    text: "XP, HP, attack, stamina, and full character progression system.",
     icon: Sparkles,
   },
   {
     title: "Mining",
-    text: "Stone, copper, crystal, dan ancient fragment untuk upgrade.",
+    text: "Stone, copper, crystal, and ancient fragments — gather resources for upgrades.",
     icon: Pickaxe,
   },
   {
     title: "Rewards",
-    text: "Item, coin, unlock, badge, dan cosmetic tanpa pay-to-win.",
+    text: "Items, coins, unlocks, badges, and cosmetics — no pay-to-win mechanics.",
     icon: Coins,
   },
   {
     title: "Security",
-    text: "Reward bernilai divalidasi server sebelum claim on-chain.",
+    text: "High-value rewards are server-validated before being claimed on-chain.",
     icon: ShieldCheck,
   },
 ];
@@ -67,22 +67,22 @@ const roadmap = [
   {
     phase: "Alpha",
     title: "Core Adventure",
-    text: "Movement, map, quest, NPC, item, mining, dan musuh dasar.",
+    text: "Movement, map, quests, NPCs, items, mining, and basic enemies.",
   },
   {
     phase: "Beta",
     title: "Player Progress",
-    text: "Inventory, XP, quest state, unlocked area, dan local/server progress.",
+    text: "Inventory, XP, quest state, unlocked areas, and local/server progress sync.",
   },
   {
     phase: "Genesis",
     title: "Wallet Layer",
-    text: "Connect wallet opsional untuk identity dan reward eligibility.",
+    text: "Optional wallet connect for identity and reward eligibility.",
   },
   {
     phase: "Season 1",
     title: "Collectible Rewards",
-    text: "Badge/cosmetic sebagai reward Web3 pertama setelah quest valid.",
+    text: "Badges and cosmetics as first Web3 rewards after quest validation.",
   },
 ];
 
@@ -97,7 +97,7 @@ export default function Home() {
             href="/"
             className="border-4 border-[#08080d] bg-[#e63946] px-3 py-2 font-display text-[11px] font-black uppercase leading-none text-white shadow-[4px_4px_0_#08080d]"
           >
-            Meki Web3
+            Retromolt
           </Link>
           <nav className="hidden items-center gap-3 font-display text-[10px] font-black uppercase sm:flex">
             <Link
@@ -137,16 +137,16 @@ export default function Home() {
         <div className="relative z-10 mx-auto grid min-h-[calc(90svh-84px)] w-full max-w-6xl items-center gap-8 px-5 pb-16 pt-6 sm:px-8 lg:grid-cols-[0.98fr_1.02fr]">
           <div className="max-w-2xl">
             <div className="mb-5 inline-flex border-4 border-[#08080d] bg-[#ffd166] px-4 py-2 font-display text-[10px] font-black uppercase text-[#08080d] shadow-[5px_5px_0_#08080d]">
-              Optional wallet adventure
+              Play first. Collect later.
             </div>
             <h1 className="max-w-3xl font-display text-[2.55rem] font-black uppercase leading-[0.95] tracking-normal text-[#fff4c4] [text-shadow:5px_5px_0_#08080d] sm:text-7xl lg:text-8xl">
-              Retro Game
+              Retromolt
               <span className="block text-[#ffd166]">Web3 Ready</span>
             </h1>
             <p className="mt-6 max-w-xl border-l-8 border-[#ffd166] bg-[#08080d]/75 px-5 py-4 font-pixel-body text-sm font-normal leading-7 text-white shadow-[6px_6px_0_#08080d] sm:text-base">
-              Meki Adventure dibangun sebagai game retro yang playable dulu,
-              lalu berkembang ke collectible badge, wallet identity, dan reward
-              claim yang tervalidasi.
+              Retromolt is built as a playable retro game first, then expands
+              into collectible badges, wallet identity, and validated reward
+              claims.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-start">
@@ -243,7 +243,7 @@ export default function Home() {
               Game Systems
             </p>
             <h2 className="mt-5 max-w-md font-display text-3xl font-black uppercase leading-tight tracking-normal sm:text-5xl">
-              Gameplay dulu, ownership nanti.
+              Gameplay first, ownership later.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">

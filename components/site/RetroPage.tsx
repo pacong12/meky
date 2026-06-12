@@ -23,7 +23,7 @@ export function SiteHeader() {
         href="/"
         className="border-4 border-[#08080d] bg-[#e63946] px-3 py-2 font-display text-[11px] font-black uppercase leading-none text-white shadow-[4px_4px_0_#08080d]"
       >
-        Meki Web3
+        Retromolt
       </Link>
       <nav className="hidden items-center gap-3 font-display text-[10px] font-black uppercase sm:flex">
         {siteNav.map((item) => (
@@ -78,7 +78,7 @@ export function SiteFooter() {
     <footer className="bg-[#08080d] px-5 py-8 text-[#fff4c4] sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 border-4 border-[#000] bg-[#111827] p-5 shadow-[7px_7px_0_#000] sm:flex-row sm:items-center sm:justify-between">
         <p className="font-display text-[10px] font-black uppercase text-[#ffd166]">
-          Meki Adventure
+          Retromolt
         </p>
         <nav className="flex flex-wrap gap-3 font-display text-[10px] font-black uppercase">
           <Link href="/terms" className="hover:text-[#ffd166]">

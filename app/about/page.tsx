@@ -4,10 +4,10 @@ import { BookOpen, Gamepad2, ShieldCheck, Trophy } from "lucide-react";
 import { PageShell, PageHero, SiteHeader, RetroBackdrop } from "@/components/site/RetroPage";
 
 const values = [
-  ["01", "Playable First", "Masuk game tanpa wallet, selesaikan quest, lalu pilih sendiri kapan connect."],
-  ["02", "Original Retro", "Visual 8-bit top-down dengan dunia, karakter, item, dan lore original."],
-  ["03", "Collectible Layer", "Badge dan cosmetic menjadi reward ownership, bukan item wajib progres."],
-  ["04", "Validated Claims", "Reward bernilai harus berasal dari progress yang tervalidasi."],
+  ["01", "Playable First", "Enter the game without a wallet, complete quests, then choose when to connect."],
+  ["02", "Original Retro", "8-bit top-down visuals with an original world, characters, items, and lore."],
+  ["03", "Collectible Layer", "Badges and cosmetics are ownership rewards, not required progression items."],
+  ["04", "Validated Claims", "High-value rewards must come from validated in-game progress."],
 ];
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
               About cartridge
             </div>
             <h1 className="mt-6 font-mono text-5xl font-black uppercase leading-none text-[#fff4c4] [text-shadow:5px_5px_0_#08080d] sm:text-7xl">
-              What is Meki?
+              What is Retromolt?
             </h1>
             <p className="mt-6 border-l-8 border-[#ffd166] bg-[#08080d]/80 px-5 py-4 font-mono text-sm font-bold leading-7 text-white shadow-[6px_6px_0_#08080d]">
               A retro adventure game that turns portfolio, quest, resource,

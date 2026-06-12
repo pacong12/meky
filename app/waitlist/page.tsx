@@ -34,7 +34,7 @@ export default async function WaitlistPage({
       <PageHero
         eyebrow="Waitlist access"
         title="Reserve your player slot."
-        text="Join the Meki Adventure waitlist with Google, X, or email. Wallet stays optional; social login is only for early access updates."
+        text="Join the Retromolt waitlist with Google, X, or email. Wallet stays optional; social login is only for early access updates."
       />
 
       <section className="bg-[#ffd166] px-5 py-12 text-[#08080d] sm:px-8">
