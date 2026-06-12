@@ -1,69 +1,134 @@
-# Meki Adventure
+# 🎮 Retromolt
 
-Web game retro top-down adventure berbasis Next.js. Fokus project ini adalah pengalaman game-first: pemain mengeksplorasi dunia pixel, berinteraksi dengan NPC, membuka item, dan menemukan konten website lewat gameplay.
+Retromolt is a web-based, retro top-down adventure game built with **Next.js**. 
 
-## Dokumentasi
+Designed with a **play-first philosophy**, Retromolt allows players to explore a rich pixel art world, interact with NPCs, complete quests, and unlock optional Web3 collectible rewards. Wallets are entirely optional: players can start playing immediately and choose to connect a wallet only when they are ready to claim rewards.
 
-- [Konsep game](docs/retro-adventure-game.md)
-- [Karakter dan dialog](docs/characters.md)
-- [Module dan setup](docs/modules-and-setup.md)
-- [MVP dan roadmap Web3](docs/web3-mvp.md)
-- [Roadmap pembangunan game](docs/game-roadmap.md)
-- [Sistem game: leveling, musuh, mining, reward](docs/game-systems.md)
-- [Kebutuhan asset desain](docs/asset-requirements.md)
-- [Rencana integrasi Bankr.bot](docs/bankr-integration.md)
-- [Bankr prompt templates](docs/bankr-prompts.md)
-- [Data schema](docs/data-schema.md)
-- [Deploy checklist](docs/deploy-checklist.md)
-- [x402 plan](docs/x402-plan.md)
-- [Backend draft](docs/backend-draft.md)
-- [Contract draft](docs/contracts.md)
-- [Rate limit](docs/rate-limit.md)
+---
 
-## Development
+## 📖 Table of Contents
+1. [Documentation](#-documentation)
+2. [Project Architecture & Pages](#-project-architecture--pages)
+3. [Getting Started](#-getting-started)
+4. [Environment Variables](#%EF%B8%8F-environment-variables)
+5. [Development Guidelines](#%EF%B8%8F-development-guidelines)
 
-```bash
-npm run dev
-```
+---
 
-Buka `http://localhost:3000`.
+## 📚 Documentation
 
-## Halaman
+Detailed design docs, game specifications, and roadmaps can be found in the `/docs` folder:
 
-- `/` landing page
-- `/about` konsep game
-- `/systems` sistem gameplay
-- `/web3` wallet dan ownership layer
-- `/bankr` console admin Bankr.bot
-- `/ops` readiness board untuk deploy dan integrasi
-- `/api-docs` dokumentasi endpoint backend
-- `/admin` overview internal
-- `/admin/waitlist` data waitlist
-- `/admin/claims` data claim
-- `/admin/rewards` catalog reward
-- `/claim` reward claim flow
-- `/roadmap` launch roadmap
-- `/assets` asset brief
-- `/waitlist` waitlist login Google, X, dan email
-- `/game` playable game
-- `/terms` terms awal
-- `/privacy` privacy awal
+*   **Gameplay & Systems:**
+    *   [Game Concept](docs/retro-adventure-game.md) - Core gameplay loops, visual style, and target audience.
+    *   [Game Systems](docs/game-systems.md) - Details on leveling, mining, enemies, and rewards.
+    *   [Character & Dialogue](docs/characters.md) - NPC profiles, dialogue trees, and narrative structure.
+*   **Web3 & Integrations:**
+    *   [Web3 MVP & Roadmap](docs/web3-mvp.md) - Wallet connection, NFT contracts, and claiming.
+    *   [Bankr.bot Integration](docs/bankr-integration.md) - Discord bot integration and administrative automation.
+    *   [Bankr Prompt Templates](docs/bankr-prompts.md) - System prompt templates for Bankr.bot.
+    *   [Smart Contract Drafts](docs/contracts.md) - Solidity contract ideas for collectible items.
+*   **Infrastructure & Plans:**
+    *   [Deployment Checklist](docs/deploy-checklist.md) - Steps for staging and production release.
+    *   [x402 Execution Plan](docs/x402-plan.md) - Architectural milestones and phases.
+    *   [Backend Architecture](docs/backend-draft.md) - Server routes, API boundaries, and database thoughts.
+    *   [Data Schema](docs/data-schema.md) - JSON structure schemas for state synchronization.
+    *   [Design Assets](docs/asset-requirements.md) - Required graphics, sprites, and maps.
+    *   [Rate Limiting Policy](docs/rate-limit.md) - Security measures for game APIs.
 
-## Catatan Kerja
+---
 
-- Implementasi gameplay sedang dikerjakan manual.
-- Jangan menimpa file game tanpa koordinasi.
-- Jangan jalankan `npm run lint` atau `npm run build` kecuali diminta.
-- Hindari aset, nama, musik, sprite, map, atau simbol dari franchise Nintendo/Zelda secara langsung.
+## 🗺️ Project Architecture & Pages
 
-## Environment
+The application is structured into the following routes:
 
-Bankr.bot:
+| Route | Description | Visibility |
+| :--- | :--- | :--- |
+| `/` | Landing page featuring game information and CTAs | Public |
+| `/game` | The interactive top-down game client | Public |
+| `/about` | Deep dive into the game concept and values | Public |
+| `/systems` | Summary of gameplay, leveling, and mechanics | Public |
+| `/web3` | Wallet status and ownership verification dashboard | Public |
+| `/waitlist` | Waitlist registration using Google, X (Twitter), or Email | Public |
+| `/claim` | Reward claiming wizard for earned in-game collectibles | Public |
+| `/roadmap` | Game development and release schedule | Public |
+| `/assets` | Asset guidelines and design briefs | Public |
+| `/api-docs` | Documentation of backend API endpoints | Developer |
+| `/ops` | Readiness board for deployment and system integration | Developer |
+| `/bankr` | Admin console control center for Bankr.bot | Developer / Admin |
+| `/admin` | Internal administration panel | Admin |
+| `/admin/waitlist` | Manage and review waitlist applicants | Admin |
+| `/admin/claims` | Review and sign reward claims | Admin |
+| `/admin/rewards` | Define and catalog in-game reward items | Admin |
+| `/terms` | Terms of Service | Legal |
+| `/privacy` | Privacy Policy | Legal |
 
-```bash
-BANKR_API_BASE_URL=https://api.bankr.bot
-BANKR_API_KEY=your_bankr_api_key
-BANKR_ADMIN_TOKEN=change_this_admin_console_token
-```
+---
 
-`BANKR_API_KEY` dan `BANKR_ADMIN_TOKEN` harus tetap server-only. Jangan pakai prefix `NEXT_PUBLIC_`.
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18.x or later recommended)
+- npm or yarn
+
+### Installation & Setup
+
+1. Clone the repository and navigate to the directory:
+   ```bash
+   git clone <repository-url>
+   cd retromolt
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create your local environment file:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Fill in the required configurations (see below).
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the game and site.
+
+---
+
+## ⚙️ Environment Variables
+
+Copy `.env.example` to `.env.local` and configure:
+
+| Key | Description | Type |
+| :--- | :--- | :--- |
+| `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID` | WalletConnect project ID for Wagmi config | Public |
+| `NEXT_PUBLIC_SITE_URL` | Base canonical domain of the website | Public |
+| `GOOGLE_CLIENT_ID` | Google OAuth Client ID for waitlist auth | Server-only |
+| `GOOGLE_CLIENT_SECRET` | Google OAuth Client Secret | Server-only |
+| `X_CLIENT_ID` | X (Twitter) OAuth Client ID | Server-only |
+| `X_CLIENT_SECRET` | X (Twitter) OAuth Client Secret | Server-only |
+| `BANKR_API_BASE_URL` | Bankr.bot API entry point (Default: `https://api.bankr.bot`) | Server-only |
+| `BANKR_API_KEY` | Secret credentials to authenticate with Bankr API | Server-only |
+| `BANKR_ADMIN_TOKEN` | Token securing the admin console of Bankr dashboard | Server-only |
+| `ADMIN_CONSOLE_TOKEN` | Token securing the main admin endpoints | Server-only |
+| `CLAIM_SIGNING_SECRET` | Key used to sign cryptographic proof for claim transactions | Server-only |
+| `MEKI_STORAGE_DRIVER` | Database/Storage driver (e.g., `json` or `supabase`) | Server-only |
+| `MEKI_STORAGE_DIR` | Local directory path if using `json` storage (Default: `.data`) | Server-only |
+| `SUPABASE_URL` | Supabase project URL (if storage driver is `supabase`) | Server-only |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role API key | Server-only |
+
+> [!WARNING]
+> Keep `BANKR_API_KEY`, `ADMIN_CONSOLE_TOKEN`, `CLAIM_SIGNING_SECRET`, and `SUPABASE_SERVICE_ROLE_KEY` secure. Do not expose them to the frontend; never prefix them with `NEXT_PUBLIC_`.
+
+---
+
+## 🛠️ Development Guidelines
+
+To maintain repository health, please follow these guidelines:
+
+*   **Gameplay Development:** The core game client is undergoing active work. Do not overwrite or refactor game logic files without coordination.
+*   **IP Protection:** Avoid using names, assets, sound files, sprite designs, maps, or references that directly resemble Nintendo or Zelda intellectual property. Use original/free retro assets.
+*   **Testing & Builds:** Do not run production builds (`npm run build`) or global linters on production main branch unless requested.
