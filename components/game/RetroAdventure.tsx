@@ -2373,7 +2373,7 @@ export default function RetroAdventure() {
               <div className="font-bold text-slate-300 mb-2">📬 HUBUNGI SANG KREATOR:</div>
               <div className="flex justify-center gap-3 text-[10px] flex-wrap">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="px-2 py-1 border border-slate-700 hover:border-yellow-500 bg-slate-900">GitHub</a>
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="px-2 py-1 border border-slate-700 hover:border-yellow-500 bg-slate-900">Twitter (X)</a>
+                <a href="https://x.com/Sususegareq" target="_blank" rel="noopener noreferrer" className="px-2 py-1 border border-slate-700 hover:border-yellow-500 bg-slate-900">Twitter (X)</a>
                 <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="px-2 py-1 border border-slate-700 hover:border-yellow-500 bg-slate-900">Discord</a>
               </div>
             </div>

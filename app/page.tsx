@@ -292,6 +292,49 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="border-b-8 border-[#08080d] bg-[#090a12] px-5 py-12 text-[#fff4c4] sm:px-8">
+        <div className="mx-auto max-w-6xl">
+          <p className="inline-flex border-4 border-[#08080d] bg-[#ffd166] px-3 py-2 font-display text-[10px] font-black uppercase text-[#08080d] shadow-[4px_4px_0_#000]">
+            The Creator
+          </p>
+          <div className="mt-8 border-4 border-[#08080d] bg-[#1b2b72] p-6 shadow-[8px_8px_0_#000]">
+            <div className="grid gap-6 md:grid-cols-[160px_1fr] items-center">
+              <div className="relative mx-auto w-40 h-40 border-4 border-[#08080d] bg-[#ffd166] p-2 shadow-[5px_5px_0_#08080d]">
+                <Image
+                  src="/game/sprites/builder.png"
+                  alt="Sususegareq Developer & Owner Avatar"
+                  width={140}
+                  height={140}
+                  className="w-full h-full object-contain [image-rendering:pixelated]"
+                />
+              </div>
+              <div className="text-left">
+                <div className="inline-flex border-2 border-[#08080d] bg-[#e63946] px-2 py-1 font-display text-[8px] font-black uppercase text-white mb-2 shadow-[2px_2px_0_#08080d]">
+                  Developer & Owner
+                </div>
+                <h3 className="font-display text-xl sm:text-2xl font-black uppercase text-[#ffd166]">
+                  Sususegareq
+                </h3>
+                <p className="mt-3 font-pixel-body text-base leading-6 text-slate-200 max-w-2xl">
+                  Meet the builder behind Retromolt. Building this pixel art world from scratch, crafting gameplay systems, Web3 connections, and responsive retro mechanics.
+                </p>
+                <div className="mt-5">
+                  <a
+                    href="https://x.com/Sususegareq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border-4 border-[#08080d] bg-[#ffd166] px-4 py-2 font-display text-[10px] font-black uppercase text-[#08080d] shadow-[4px_4px_0_#000] transition-transform hover:-translate-y-0.5 hover:bg-white active:translate-y-0.5"
+                  >
+                    Follow on X
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
     </main>
   );
